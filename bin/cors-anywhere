@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var host = process.env.PORT || 'localhost';
+var port = process.env.PORT || 8080;
+
+var cors_proxy = require('../lib/cors-anywhere.js');
+
+cors_proxy.createServer({
+    removeHeaders: ['cookie', 'cookie2']
+})
+.listen(port, host, function() {
+    console.log('Running CORS Anywhere on ' + host + ':' + port);
+});

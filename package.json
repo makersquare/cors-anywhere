@@ -20,6 +20,9 @@
     "heroku"
   ],
   "main": "./lib/cors-anywhere.js",
+  "bin": {
+    "cors-anywhere": "./bin/cors-anywhere"
+  },
   "dependencies": {
     "connect": "^3.4.0",
     "http-proxy": "1.11.1",
